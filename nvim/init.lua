@@ -1,2 +1,2 @@
--- Empty.. Still need to configure this thing
+require("user")
 
