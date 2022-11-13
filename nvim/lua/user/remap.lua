@@ -1,6 +1,7 @@
 local nnoremap = require("user.keymap").nnoremap
 nnoremap = require("user.keymap").nnoremap
-nnoremap("<C-e>", "<cmd>Ex<CR>")
+nnoremap("<ESC>", ":")
+nnoremap("<leader>ee", "<cmd>E<CR>")
 
 
 -- Mappings for LSP
@@ -57,3 +58,10 @@ require('lspconfig')['rust_analyzer'].setup{
       ["rust-analyzer"] = {}
     }
 }
+
+-- Keymap for Telescope
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})

@@ -12,4 +12,4 @@ vim.opt.termguicolors = true
 
 vim.g.mapleader = " "
 
-   
+require("bufferline").setup{}
