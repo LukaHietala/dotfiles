@@ -1,4 +1,4 @@
 # dotfiles
 
-![](http://github.com/lukahietala/dotfiles/assets/nvim.png)
+![](https://github.com/LukaHietala/dotfiles/blob/main/assets/nvim.png)
 
