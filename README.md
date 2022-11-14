@@ -21,7 +21,7 @@ Neovim
 
 ## Installation
 
-- Copy all the files from the `.config` file to your config file
+- Copy all the files from the `.config` directory to your config directory
 - Set nvim config file to the one in your `.config` by running the command `nvim -c ~/.config/nvim`
 - Open Neovim and run command `:PackerSync` - Installs all the plugins
 - Install tree-sitter syntax highlight stuff for different programming languages by running the command `:TSInstall <language>`
