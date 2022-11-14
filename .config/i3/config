@@ -16,10 +16,23 @@ set $mod Mod4
 # is used in the bar {} block below.
 font Source Code Pro 15px
 
-for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 2
                           # class                 border  backgr. text    indicator child_border
-for_window [class="^.*"] client.focused          #77dd77 #285577 #ffffff #2e9ef4   #285577
+# for_window [class="^.*"] client.focused          #77dd77 #285577 #ffffff #2e9ef4   #285577
 
+# SMART BOOORDERS!
+hide_edge_borders smart
+
+client.focused           #9aa5ce #364A82 #c0caf5 #9aa5ce   #9aa5ce
+client.focused_inactive  #16161d #16161d #c0caf5 #16161d   #16161d
+client.unfocused         #16161d #16161d #c0caf5 #16161d   #16161d
+
+gaps inner 7
+gaps outer 3
+gaps top 3
+gaps bottom 3
+# Hide gaps when there is only 1 window
+smart_gaps on
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -131,9 +144,9 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-bar {
-        status_command i3status
-}
+# bar {
+#        status_command i3status
+# }
 
 # audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
@@ -141,6 +154,8 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
-# exec --no-startup-id picom -experimental-backends
+exec --no-startup-id picom -experimental-backends
 # exec nitrogen --restore
-# exec --no-startup-id xrandr --output eDP-1 --brightness 0.9
+exec --no-startup-id xrandr --output eDP-1 --brightness 0.9
+
+exec_always ~/.config/polybar/launch.sh --grayblocks
