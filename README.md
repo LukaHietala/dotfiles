@@ -19,6 +19,10 @@ Neovim
 
 - Packer package manager
 
+Polybar
+
+- Oisevka font
+
 ## Installation
 
 - Copy all the files from the `.config` directory to your config directory
