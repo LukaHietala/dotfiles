@@ -32,5 +32,5 @@ That's should be it. If you notice a one step missing or you have errors you can
 
 ## Screenshot
 
-![](https://github.com/LukaHietala/dotfiles/blob/main/assets/nvim.png)
+![](https://github.com/LukaHietala/dotfiles/blob/main/assets/config.png)
 
