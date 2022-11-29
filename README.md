@@ -1,4 +1,4 @@
-# dotfiles (not finished)
+# dotfiles (not finished, might not work)
 
 ## Dependencies
 
